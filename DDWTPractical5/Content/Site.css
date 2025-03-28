@@ -1,0 +1,142 @@
+﻿.graph .group {
+    /*border: 1px solid #fff;*/
+    font-size: 0;
+}
+
+#graph .group:hover, #graph .group.active {
+    background-color: rgba(255, 216, 0, 0.2);
+    outline: 1px inset rgba(0,0,0,0.6);
+    cursor: pointer;
+}
+
+
+
+div.bar {
+    display: inline-block;
+    padding-bottom: 10px;
+    border: 1px solid rgba(192, 4, 4, 0.5);
+    border-left: none;
+    /*line-height: 20px;*/
+    text-align: right;
+    vertical-align: middle;
+    margin: 0;
+    padding: 2px 5px 2px 0;
+    font-size: 0.8rem;
+    color: #000;
+    background-color: rgba(255,0,0,0.3);
+}
+
+div.text {
+    display: inline-block;
+    width: 8%;
+    padding-right: 5px;
+    line-height: 40px !important;
+    vertical-align: middle;
+    text-align: right;
+    padding-right: 5px;
+    display: inline-block;
+    font-size: 0.8rem;
+    border-right: 1px solid #000;
+}
+
+
+.x-axis {
+    border-top: 1px solid #000;
+}
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+
+.card-link:hover {
+    transform: scale(1.05); /* Slightly increase the size of the card */
+    box-shadow: 0 10px 15px #1647fb;
+    transition: transform 0.5s ease;
+}
+/* Background Image for the .im-bg class */
+.im-bg {
+    background-attachment: fixed;
+    background-image: url('https://img3.thuthuatphanmem.vn/uploads/2019/09/17/nen-background-hoa-dao-tet-dep_105958540.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1; /* Ensure the background stays behind all content */
+}
+.im-bg-content {
+    position: relative; /* Ensure content layers over the background */
+    z-index: 1; 
+    
+}
+/* Basic slider container */
+.slider {
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+/* Slides container to hold all the slides */
+.slides {
+    display: flex;
+    transition: transform 1.5s ease-in-out;
+    
+}
+
+/* Each individual slide */
+.slide {
+    min-width: 100%;
+   
+}
+
+    /* Slide images */
+    .slide img {
+        width: 100%;
+        height: 700px; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensures the image covers the slide while maintaining its aspect ratio */
+        object-position: center;
+        
+    }
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional background */
+}
+
+.background {
+    background: url("https://anhdepfree.com/wp-content/uploads/2018/11/Black-Wallpaper-anh-nen-mau-den-24.jpg");
+    border: 1px solid black;
+    height: 250px;
+}
+
+.transbox {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid white;
+    opacity: 0.6;
+}
+
+    .transbox h3 {
+        margin: 5%;
+        font-weight: bold;
+        color: #000000;
+        
+    }
+.time-font {
+    font-family: Bahnschrift;
+    font-size: 29px;
+    color: #5d6123;
+}
+.im-bg2 {
+    background-attachment: fixed;
+    background-image: url('https://anhdepfree.com/wp-content/uploads/2018/11/Black-Wallpaper-anh-nen-mau-den-24.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1; /* Ensure the background stays behind all content */
+}
+.new-roman-font {
+    font-family: "Times New Roman";
+}

@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    
+
+</head>
+<body>
+   
+   
+
+    @RenderBody()
+
+
+    <hr />
+    <footer class="text-center">
+        <p>&copy; @DateTime.Now.Year - Ghibli Studio</p>
+        <div class="justify-content-end">
+            <a  href="https://www.ghibli.jp/" title="Ghibli Studio">
+                <img src="https://i.pinimg.com/564x/f8/33/5b/f8335b67ce15d3e1e8da4e70a7922fd0.jpg" width="200" height="100" />
+            </a>
+           
+        </div>
+       
+    </footer>
+
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+   
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+
+</body>
+
+</html>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelector('.slides');
+    const allSlides = document.querySelectorAll('.slide');
+    const totalSlides = allSlides.length;
+
+    // Clone the first slide and append it to the end for seamless looping
+    const firstSlideClone = allSlides[0].cloneNode(true);
+    slides.appendChild(firstSlideClone);
+
+    // Show the next slide
+    function showSlide(index) {
+        slides.style.transition = "transform 1s ease"; // Add transition for smooth sliding
+
+        // Move to the next slide
+        if (index > totalSlides - 1) {
+            currentSlide = 0; // Reset to first slide (before transition happens)
+            slides.style.transition = "none"; // Disable transition for reset
+            slides.style.transform = `translateX(0%)`; // Instantly jump back to the first slide
+        } else {
+            currentSlide = index;
+            slides.style.transform = `translateX(${-currentSlide * 100}%)`;
+        }
+    }
+
+    // Automatically cycle through slides every 3 seconds
+    setInterval(() => {
+        if (currentSlide >= totalSlides) {
+            // Reset to the first slide without transition
+            setTimeout(() => {
+                slides.style.transition = "none"; // Disable transition for reset
+                slides.style.transform = `translateX(0%)`; // Instantly jump back to the first slide
+                currentSlide = 0;
+            }, 1000); // Time to wait for the last slide animation to complete
+        } else {
+            showSlide(currentSlide + 1);
+        }
+    }, 2000);
+</script>
+
